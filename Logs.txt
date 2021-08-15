@@ -1,0 +1,5 @@
+Day 1: 
+♦ Both the server and the client files were created using npm
+♦ Postgresql was set up and got the server up and running. 
+
+Day 2: 

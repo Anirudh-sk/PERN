@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import  EditUsers from "./EditUsers";
+import SearchUsers from './SearchUsers';
 
 
 function ListUsers() {
@@ -40,6 +41,7 @@ function ListUsers() {
     return (
         <div>
             <h1 className="text-center mt-4">List of Employees</h1>
+            <SearchUsers/>
             <table className="table mt-4 text-center">
                 <thead>
                 <tr>
