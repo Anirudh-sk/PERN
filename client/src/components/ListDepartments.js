@@ -33,9 +33,9 @@ function ListDepartments() {
         <div>
             <h1 className="text-center mt-4">List of Departments</h1>
             {/* <SearchUsers/> */}
-            <input placeholder="Search for Department" value={Search} onChange={(e)=>{setSearch(e.target.value)}} type="text" className="form-control" />
+            <input placeholder="Search for Department" value={Search} onChange={(e)=>{setSearch(e.target.value)}} type="text" className="form-control " />
 
-            <table className="table mt-4 text-center">
+            <table className="table mt-4 text-center table-dark ">
                 <thead>
                 <tr>
                     <th>Department_ID</th>

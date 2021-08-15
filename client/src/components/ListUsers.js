@@ -52,7 +52,7 @@ function ListUsers() {
             {/* <SearchUsers/> */}
             <input placeholder="Search for Employee" value={Search} onChange={(e)=>{setSearch(e.target.value)}} type="text" className="form-control" />
 
-            <table className="table mt-4 text-center">
+            <table className="table mt-4 text-center table-dark">
                 <thead>
                 <tr>
                     <th>Emp_ID</th>

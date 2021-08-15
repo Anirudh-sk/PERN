@@ -1,5 +1,14 @@
 Day 1: 
-♦ Both the server and the client files were created using npm
+♦ Both the server and the client files were created using npm.
 ♦ Postgresql was set up and got the server up and running. 
 
 Day 2: 
+♦ The server was connected to the DB. 
+♦ Tables were created and the basic CRUD was done using REST API.
+♦ The UI was Partially made.
+
+Day 3: 
+♦ UI was completed. 
+♦ The UI was connected to the backend.
+♦ Search operations were made in the UI.
+♦ Final touches were given to the code.

@@ -31,9 +31,9 @@ function InputUsers() {
 
     return (
         <div>
-            <h1 className="text-center mt-4">Employee Management PERN</h1>
+            <h1 className="text-center mt-4 ">Employee Management PERN</h1>
             <form className=' mt-4' onSubmit={onsubmitform}>
-                <input type="text" placeholder="Name of Employee" className="form-control mt-4" value={EmpName} onChange={e=>{setName(e.target.value)}} required/>
+                <input type="text" placeholder="Name of Employee" className="form-control mt-4 " value={EmpName} onChange={e=>{setName(e.target.value)}} required/>
                 <input type="text" placeholder="Age of Employee" className="form-control mt-4" value={Age} onChange={e=>{setAge(e.target.value)}} required/>
                 <input type="text" placeholder="Department of Employee" className="form-control mt-4" value={Department} onChange={e=>{setDepartment(e.target.value)}} required/>
                 <button className="btn btn-success mt-4" style={{width:'100%'}} type="submit"  >Add</button>
