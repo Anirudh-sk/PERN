@@ -2,6 +2,7 @@ import './App.css';
 import React,{ Fragment } from 'react';
 import  InputUsers from "./components/InputUsers";
 import  ListUsers from "./components/ListUsers";
+import ListDepartments from "./components/ListDepartments";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <InputUsers/>
         <ListUsers/>
         {/* <EditUsers/> */}
+        <ListDepartments/>
       </div>
     </Fragment>
   );

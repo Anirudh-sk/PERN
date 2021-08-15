@@ -31,6 +31,17 @@ app.get("/users",async(req,res)=>{
     }
 })
 
+//get all departments
+app.get("/department",async(req,res)=>{
+    try {
+        const allUsers = await pool.query("SELECT * FROM department");
+        res.json(allUsers.rows)
+        // res.send(allUsers);
+    } catch (error) {
+        console.error(error);
+    }
+})
+
 //get specific users
 app.get("/users/:id",async(req,res)=>{
     try {

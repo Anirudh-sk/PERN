@@ -5,8 +5,9 @@ import  EditUsers from "./EditUsers";
 
 function ListUsers() {
 
-    const [Users, setUsers] = useState([])
-    const [Search, setSearch] = useState(null)
+    const [Users, setUsers] = useState([])                
+    const [Department, setDepartment] = useState([])                
+    const [Search, setSearch] = useState("")
 
 
     
@@ -19,6 +20,12 @@ function ListUsers() {
                 console.log(jsonData);
                 setUsers(jsonData)
                 console.log(Users);
+
+                const res2= await fetch("http://localhost:5000/department")
+                const jsonData2= await res2.json()
+                console.log(jsonData2);
+                setDepartment(jsonData2)
+                console.log(Department);
                 
             } catch (error) {
                 console.error(error);
@@ -54,23 +61,24 @@ function ListUsers() {
                     <th>Department</th>
                     <th>Edit Department</th>
                     <th>Delete</th>
+                    {/* <th>Department ID</th> */}
                 </tr>
                 </thead>
                 <tbody>
                     {Users.filter((val)=>{
-                        if (Search===null){
+                        if (Search===""){
                             return val
                         }
                         else if (val.empname.toLowerCase().includes(Search.toLocaleLowerCase())){
                             return val
                         }
-                        else if (val.emp_id===Search){
+                        else if (val.emp_id==Search){
                             return val
                         }
                         else if (val.department.toLowerCase().includes(Search.toLocaleLowerCase())){
                             return val
                         }
-                        else if (val.age===Search){
+                        else if (val.age==Search){
                             return val
                         }
                     }).map((user)=>(
