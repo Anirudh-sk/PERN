@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 
 import  EditUsers from "./EditUsers";
-import SearchUsers from './SearchUsers';
 
 
 function ListUsers() {
 
     const [Users, setUsers] = useState([])
+    const [Search, setSearch] = useState(null)
+
 
     
     useEffect(() => {
@@ -41,7 +42,9 @@ function ListUsers() {
     return (
         <div>
             <h1 className="text-center mt-4">List of Employees</h1>
-            <SearchUsers/>
+            {/* <SearchUsers/> */}
+            <input placeholder="Search for Employee" value={Search} onChange={(e)=>{setSearch(e.target.value)}} type="text" className="form-control" />
+
             <table className="table mt-4 text-center">
                 <thead>
                 <tr>
@@ -54,7 +57,23 @@ function ListUsers() {
                 </tr>
                 </thead>
                 <tbody>
-                    {Users.map((user)=>(
+                    {Users.filter((val)=>{
+                        if (Search===null){
+                            return val
+                        }
+                        else if (val.empname.toLowerCase().includes(Search.toLocaleLowerCase())){
+                            return val
+                        }
+                        else if (val.emp_id===Search){
+                            return val
+                        }
+                        else if (val.department.toLowerCase().includes(Search.toLocaleLowerCase())){
+                            return val
+                        }
+                        else if (val.age===Search){
+                            return val
+                        }
+                    }).map((user)=>(
                         <tr key={user.emp_id}>
                             <td>{user.emp_id}</td>
                             <td>{user.empname}</td>
