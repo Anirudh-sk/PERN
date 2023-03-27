@@ -37,6 +37,7 @@ app.get("/department",async(req,res)=>{
         const allUsers = await pool.query("SELECT * FROM department");
         res.json(allUsers.rows)
         // res.send(allUsers);
+        
     } catch (error) {
         console.error(error);
     }
